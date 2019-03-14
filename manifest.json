@@ -1,0 +1,9 @@
+{
+  "manifest_version": 2,
+  "name": "Literal Search",
+  "version": "1.0.0",
+  "permissions": [
+      "contextMenus",
+      "tabs"],      
+  "background": {"page": "background.html"}
+}
