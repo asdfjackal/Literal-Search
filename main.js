@@ -1,13 +1,13 @@
 literalSearch = function(word){
    var query = word.selectionText;
-   var replaced = query.replace(' ', '+');
+   var replaced = encodeURIComponent(query);
    var url = 'https://www.google.com/search?q="' + replaced + '"';
    chrome.tabs.create({url: url });
 };
 
 literalSearchBackground = function(word){
    var query = word.selectionText;
-   var replaced = query.replace(' ', '+');
+   var replaced = encodeURIComponent(query);
    var url = 'https://www.google.com/search?q="' + replaced + '"';
    chrome.tabs.create({url: url, active: false});
 }
